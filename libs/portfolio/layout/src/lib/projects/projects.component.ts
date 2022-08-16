@@ -47,16 +47,15 @@ export class ProjectsComponent implements OnInit {
         githubLink: 'https://github.com/michelm117/typewriter/',
         link: 'https://typewriter.daily-practice.net/',
         imgName: 'assets/img/typewriter_screen.png',
-        technologies: ['Javascript', 'jQuery', 'PHP'],
+        technologies: ['Javascript', 'jQuery'],
       },
-
       {
         rank: 2,
         title: 'Portfolio v1.0',
         description:
           'This was my first attempt at creating a static homepage/portfolio. I used mainly pure HTML and CSS. For the contact form I used PHP.',
-        githubLink: 'https://github.com/michelm117/typewriter/',
-        link: 'https://portfolio-old.michel.lu.',
+        githubLink: 'https://git.michel.lu/projects/17/files',
+        link: 'https://old.michel.lu',
         imgName: 'assets/img/portfolio_1.png',
         technologies: ['Javascript', 'Bootstrap', 'PHP'],
       },
@@ -71,16 +70,6 @@ export class ProjectsComponent implements OnInit {
         technologies: ['C#', 'Monogame'],
       },
     ];
-    // this.projectService.getAll().subscribe({
-    //   next: (data: Project[]) => {
-    //     console.log(JSON.stringify(data));
-    //     this.projects = data;
-
-    //     this.projects.forEach((project) => {
-    //       console.log(project);
-
-    //       project.imgName = 'http://localhost:5000/api/projects/image/' + project.imgName;
-    //     });
 
     this.projects.sort((p1: Project, p2: Project) => {
       if (p1.rank > p2.rank) {
@@ -91,11 +80,5 @@ export class ProjectsComponent implements OnInit {
       }
       return 0;
     });
-    //     console.log(JSON.stringify(this.projects));
-    //   },
-    //   error: (err) => {
-    //     console.log(err);
-    //   },
-    // });
   }
 }
