@@ -1,0 +1,288 @@
+.project {
+  display: none;
+  grid-template: "container";
+  place-items: center;
+  place-content: center;
+  text-align: center;
+
+  & > * {
+    grid-area: container;
+  }
+
+  .content {
+    opacity: 0;
+    z-index: 20;
+
+    font-size: 12px;
+
+    .project-overline {
+      display: none;
+      font-family: "Source Code Pro", monospace;
+      font-weight: 600;
+    }
+
+    .project-title {
+      font-size: 14px;
+      font-weight: 600;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .project-description {
+      border-radius: 8px;
+      margin: 5% 5%;
+
+      background-color: rgb(255 74 87);
+
+      p {
+        padding: 5px 0;
+      }
+    }
+
+    .technology {
+      font-family: "Source Code Pro", monospace;
+      margin-bottom: 2%;
+    }
+
+    .links {
+      font-size: 15px;
+    }
+  }
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 280px;
+  height: 185px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  background-color: rgb(255 74 87);
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 8px;
+  font-size: 12px;
+
+  .flip-card-project-overline {
+    display: none;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 600;
+  }
+
+  .flip-card-project-title {
+    padding-top: 5px;
+
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .flip-card-project-description {
+    border-radius: 8px;
+    margin: 3% 5%;
+
+    background-color: white;
+    color: rgb(255 74 87);
+  }
+
+  .flip-card-technology {
+    font-family: "Source Code Pro", monospace;
+    margin-bottom: 2%;
+  }
+
+  .flip-card-links {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 400px) {
+  .flip-card {
+    width: 350px;
+    height: 230px;
+
+    .flip-card-inner {
+      .flip-card-back {
+        .flip-card-project-overline {
+          padding-top: 15px;
+          display: block;
+          color: white;
+        }
+
+        .flip-card-project-title {
+          padding-top: 5px;
+        }
+        fa-icon {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .flip-card {
+    width: 450px;
+    height: 295px;
+
+    .flip-card-inner {
+      .flip-card-back {
+        .flip-card-project-overline {
+          padding-top: 15px;
+          display: block;
+          color: white;
+          font-size: 16px;
+        }
+
+        .flip-card-project-title {
+          padding-top: 5px;
+          font-size: 20px;
+        }
+
+        .flip-card-project-description {
+          font-size: 14px;
+        }
+
+        .flip-card-technology {
+          font-size: 14px;
+        }
+
+        fa-icon {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  // .project {
+  //   .content {
+  //     font-size: 16px;
+
+  //     .project-overline {
+  //       display: block;
+  //       font-size: 18px;
+  //     }
+
+  //     .project-title {
+  //       font-size: 18px;
+  //       margin: 5px 0;
+  //       font-weight: normal;
+  //     }
+
+  //     .project-description {
+  //       border-radius: 8px;
+
+  //       background-color: rgb(255 74 87);
+
+  //       p {
+  //         padding: 5px 0;
+  //       }
+  //     }
+
+  //     .links {
+  //       font-size: 22px;
+  //       margin: 5px 0;
+  //     }
+
+  //     img {
+  //       width: 100%;
+  //       height: auto;
+  //       aspect-ratio: 16 / 9;
+  //       object-fit: cover;
+  //     }
+  //   }
+  // }
+}
+
+// md
+@media (min-width: 768px) {
+  .flip-card {
+    display: none;
+  }
+  .project {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 100%;
+    margin: 0 auto;
+
+    &:hover > .content {
+      opacity: 1;
+      transition: none;
+    }
+    &:not(hover) > .content {
+      opacity: 1;
+      transition: none;
+    }
+
+    img,
+    .content {
+      grid-row: 1 / 2;
+    }
+
+    .content {
+      opacity: 100%;
+      grid-column: 6 / -1;
+      align-self: center;
+      opacity: 0;
+      text-align: right;
+
+      .project-overline {
+        display: block;
+        font-size: 1.2rem;
+      }
+
+      .project-title {
+        font-size: 1.6rem;
+        font-weight: 600;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .project-description {
+        border-radius: 8px;
+        margin: 0;
+        font-size: 1rem;
+
+        background-color: rgb(255 74 87);
+        padding: 8px 20px 8px 50px;
+
+        p {
+          padding: 0 0;
+        }
+      }
+
+      .technology {
+        font-size: 1rem;
+        margin: 15px 0;
+        justify-content: end;
+      }
+      .links {
+        font-size: 1.4rem;
+        justify-content: end;
+      }
+    }
+    img {
+      grid-column: 1 / 7;
+    }
+  }
+}

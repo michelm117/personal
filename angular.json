@@ -5,6 +5,12 @@
     "api": "apps/api",
     "api-interfaces": "libs/api-interfaces",
     "portfolio": "apps/portfolio",
-    "portfolio-e2e": "apps/portfolio-e2e"
+    "portfolio-core": "libs/portfolio/core",
+    "portfolio-data": "libs/portfolio/data",
+    "portfolio-e2e": "apps/portfolio-e2e",
+    "portfolio-layout": "libs/portfolio/layout",
+    "portfolio-media": "libs/portfolio/media",
+    "portfolio-module": "libs/portfolio/module",
+    "portfolio-shared": "libs/portfolio/shared"
   }
 }

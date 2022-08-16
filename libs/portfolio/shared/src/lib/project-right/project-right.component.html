@@ -1,0 +1,56 @@
+<div class="project">
+  <div class="content">
+    <p class="font-bold project-overline text-my-red">Featured Project</p>
+    <h3 class="project-title text-x">{{project.title}}</h3>
+    <div class="project-description ">
+      <p>
+        {{project.description}}
+      </p>
+    </div>
+    <div>
+      <ul class="flex justify-center space-x-4 technology">
+        <li *ngFor="let technology of project.technologies; let i = index">{{technology}}</li>
+      </ul>
+      <div class="flex justify-center space-x-4 links">
+        <a *ngIf="project.githubLink" target=”_blank” href={{project.githubLink}}>
+          <fa-icon [icon]="faGithub"></fa-icon>
+        </a>
+        <a *ngIf="project.link" target=”_blank” href={{project.link}}>
+          <fa-icon [icon]="faArrowUp"></fa-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <img src="{{project.imgName}}" alt="">
+</div>
+
+<div class="container w-full h-full mx-auto flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="{{project.imgName}}" alt="Avatar">
+    </div>
+    <div class="flip-card-back">
+      <p class="font-bold flip-card-project-overline text-my-red">Featured Project</p>
+      <h3 class="flip-card-project-title text-x">{{project.title}}</h3>
+      <div class="flip-card-project-description ">
+        <p>
+          {{project.description}}
+        </p>
+      </div>
+      <div>
+        <ul class="flex justify-center space-x-4 flip-card-technology">
+          <li *ngFor="let technology of project.technologies; let i = index">{{technology}}</li>
+        </ul>
+        <div class="flex justify-center space-x-4 flip-card-links">
+          <a *ngIf="project.githubLink" target=”_blank” href={{project.githubLink}}>
+            <fa-icon [icon]="faGithub"></fa-icon>
+          </a>
+          <a *ngIf="project.link" target=”_blank” href={{project.link}}>
+            <fa-icon [icon]="faArrowUp"></fa-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

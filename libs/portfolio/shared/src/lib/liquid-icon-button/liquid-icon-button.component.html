@@ -1,0 +1,7 @@
+<!-- <button class="{{classes}}" [ngClass]="{'rand0' : x[0],  'rand1' : x[1],  'rand2' : x[2],  'rand3' : x[3]}">
+  {{text}}
+</button> -->
+<a [ngClass]="{'rand0' : x[0],  'rand1' : x[1],  'rand2' : x[2],  'rand3' : x[3]}"
+  class="flex items-center justify-center cursor-pointer border-2 rounded-full {{classes}} ">
+  <fa-icon [icon]="faIcon"></fa-icon>
+</a>

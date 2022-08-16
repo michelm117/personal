@@ -1,0 +1,141 @@
+<div class="nav">
+  <div class="flex justify-center py-5 sm:py-0 sm:h-20 bg-dark-blue">
+    <nav class="container px-5 m-auto xl:max-w-6xl sm:p-0">
+      <div class="desktopMenu">
+        <a class="text-2xl uppercase" href="#home">
+          Marc Michel
+        </a>
+
+
+
+        <a class="hidden transition-all duration-300 sm:block hover:text-my-red hover:ease-in" href="#contact">
+          Contact
+        </a>
+        <a class="hidden transition-all duration-300 sm:block hover:text-my-red hover:ease-in" href="#experience">
+          Experience
+        </a>
+        <a class="hidden transition-all duration-300 sm:block hover:text-my-red hover:ease-in" href="#projects">
+          Projects
+        </a>
+        <a class="hidden transition-all duration-300 sm:block hover:text-my-red hover:ease-in align-right"
+          href="#about">
+          About
+        </a>
+
+        <div class="burger space-y-1.5 sm:hidden flex flex-col" (click)="toggleSideNav()">
+          <div class="bar" [ngClass]="{'anim-first-bar': showMobileSideNav}"></div>
+          <div class="bar" [ngClass]="{'anim-second-bar': showMobileSideNav}"></div>
+          <div class="bar" [ngClass]="{'anim-third-bar': showMobileSideNav}"></div>
+        </div>
+      </div>
+
+      <div class="flex flex-col w-full text-center mobileNav" [ngClass]="showMobileSideNav ? 'show' : 'hide'">
+
+
+
+        <a class="transition-all duration-300 sm:hidden hover:text-my-red hover:ease-in align-right"
+          (click)="closeSideNav()" href="#about">
+          About
+        </a>
+        <a class="transition-all duration-300 sm:hidden hover:text-my-red hover:ease-in" (click)="closeSideNav()"
+          href="#projects">
+          Projects
+        </a>
+        <a class="transition-all duration-300 sm:hidden hover:text-my-red hover:ease-in" (click)="closeSideNav()"
+          href="#experience">
+          Experience
+        </a>
+        <a class="transition-all duration-300 sm:hidden hover:text-my-red hover:ease-in" (click)="closeSideNav()"
+          href="#contact">
+          Contact
+        </a>
+      </div>
+
+    </nav>
+
+    <!--  Mobile Navigation -->
+    <!-- <ul class="flex flex-col items-center w-full pb-4 pr-4 space-y-2 sidenav sm:hidden burger"
+      [ngClass]="showMobileSideNav ? 'show' : 'hide'">
+      <li class="transition-all duration-300 hover:text-my-red hover:ease-in">
+        <a href="#about">About</a>
+      </li>
+      <li class="transition-all duration-300 hover:text-my-red hover:ease-in">
+        <a href="#projects">Projects</a>
+      </li>
+      <li class="transition-all duration-300 hover:text-my-red hover:ease-in">
+        <a href="#experience">Experience</a>
+      </li>
+      <li class="transition-all duration-300 hover:text-my-red hover:ease-in">
+        <a href="#contact">Contact</a>
+      </li>
+    </ul> -->
+  </div>
+
+
+</div>
+
+<!-- top bar left -->
+<!-- <ul class="">
+      <li class="text-2xl uppercase">
+        <a href="#home">
+          Marc Michel
+        </a>
+      </li>
+      <li class="transition-all duration-300 hover:text-my-red hover:ease-in">
+        <a href="#about">About</a>
+      </li>
+      <li class="transition-all duration-300 hover:text-my-red hover:ease-in">
+        <a href="#projects">Projects</a>
+      </li>
+      <li class="transition-all duration-300 hover:text-my-red hover:ease-in">
+        <a href="#experience">Experience</a>
+      </li>
+      <li style="float:right" class="transition-all duration-300 hover:text-my-red hover:ease-in">
+        <a href="#contact">Contact</a>
+      </li>
+    </ul> -->
+<!-- <ul>
+      <div class="floatleft">
+        <li class="text-2xl uppercase"><a href="#">Marc Michel</a></li>
+      </div>
+      <div class="floatright">
+        <a href="#about">About</a>
+
+        <a href="#projects">Projects</a>
+
+
+        <a href="#experience">Experience</a>
+
+
+        <a href="#contact">Contact</a>
+
+      </div>
+    </ul> -->
+
+<!-- to bar right  -->
+<!-- <ul class="items-center hidden space-x-5 sm:flex">
+      <li class="transition-all duration-300 hover:text-my-red hover:ease-in">
+        <a href="#about">About</a>
+      </li>
+      <li class="transition-all duration-300 hover:text-my-red hover:ease-in">
+        <a href="#projects">Projects</a>
+      </li>
+      <li class="transition-all duration-300 hover:text-my-red hover:ease-in">
+        <a href="#experience">Experience</a>
+      </li>
+      <li class="transition-all duration-300 hover:text-my-red hover:ease-in">
+        <a href="#contact">Contact</a>
+      </li>
+    </ul> -->
+
+<!-- <div class="flex items-center text-white sm:hidden">
+      <div class="space-y-1.5">
+        <div class="w-6 h-0.5 bg-white"></div>
+        <div class="w-6 h-0.5 bg-white"></div>
+        <div class="w-6 h-0.5 bg-white"></div>
+      </div>
+    </div> -->
+<!-- </nav> -->
+
+
+<!-- </div> -->

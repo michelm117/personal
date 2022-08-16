@@ -1,0 +1,48 @@
+<section id="contact" class="bg-blue">
+  <div
+    class="container w-full max-w-2xl px-5 py-24 mx-auto text-white sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl md:px-0">
+
+    <!-- <div class="container h-screen px-5 py-24 mx-auto text-white md:px-0 xl:max-w-6xl"> -->
+
+    <div class="grid w-full mx-auto justify-items-center">
+      <h1 id="heading" class="mb-2 text-4xl font-bold md:mb-6 md:text-5xl lg:text-6xl">
+        Contact Me
+      </h1>
+      <p class="text-lg leading-6 text-center">
+        Interested to work together? Let's talk
+      </p>
+      <div class="my-8 border-b-2 w-14 border-my-red"></div>
+
+      <div class="mb-16 card-grid">
+        <personal-info-card title="Locate me" message="Freiburg im Breisgau"></personal-info-card>
+        <personal-info-card [faIcon]="faMessage" title="Get in online" message="marc@michel.lu">
+        </personal-info-card>
+      </div>
+
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="w-full">
+        <input
+          [ngClass]="(contactForm.controls['name'].touched || buttonClicked) && contactForm.controls['name'].invalid ? 'invalid' : 'valid'"
+          class="bg-dark-blue focus:border-gray-400" id="name" formControlName="name" type="text"
+          placeholder="Your Name" required autocomplete="off">
+
+        <input
+          [ngClass]="(contactForm.controls['email'].touched || buttonClicked) && contactForm.controls['email'].invalid ? 'invalid' : 'valid'"
+          class=" bg-dark-blue focus:border-gray-400" id="email" formControlName="email" type="email"
+          placeholder="Your Email" required autocomplete="off">
+        <input
+          [ngClass]="(contactForm.controls['subject'].touched || buttonClicked) && contactForm.controls['subject'].invalid ? 'invalid' : 'valid'"
+          class=" bg-dark-blue focus:border-gray-400" id="subject" formControlName="subject" type="text"
+          placeholder="Your Subject" required autocomplete="off">
+        <textarea
+          [ngClass]="(contactForm.controls['message'].touched || buttonClicked) && contactForm.controls['message'].invalid ? 'invalid' : 'valid'"
+          class="h-48 resize-none bg-dark-blue focus:border-gray-400" formControlName="message" type="text" id="message"
+          placeholder="Your Message" required autocomplete="off"></textarea>
+        <button [ngClass]="contactForm.invalid && buttonClicked ? 'disableButton' : 'enableButton' " type="submit"
+          name="submit" class="text-lg rounded-full bg-my-red">Send Message</button>
+        <div [ngClass]="sendSuccessfully ? 'showSuccess' : 'showNothing'">Successfully send message
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>

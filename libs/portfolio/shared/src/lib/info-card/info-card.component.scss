@@ -1,0 +1,27 @@
+.card {
+  display: grid;
+  grid-template-rows: 1f;
+  grid-template-columns: 10px 1f;
+  justify-content: start;
+  padding: 25px 35px;
+
+  border-radius: 8px;
+
+  .icon {
+    grid-row: 1;
+    grid-column: 1;
+
+    display: grid;
+    align-content: center;
+  }
+
+  .info {
+    margin-left: 35px;
+    width: 100%;
+    grid-row: 1;
+    grid-column: 2;
+
+    display: grid;
+    row-gap: 10px;
+  }
+}

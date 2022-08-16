@@ -1,0 +1,66 @@
+.nav {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: white;
+
+  z-index: 80;
+  width: 100%;
+  position: fixed;
+  top: 0;
+
+  .desktopMenu :not(:first-child) {
+    float: right;
+    padding-left: 1rem;
+  }
+}
+
+.burger {
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-top: 6px;
+}
+
+.mobileNav {
+  transition: 0.25s;
+
+  a {
+    padding: 5px 0;
+    display: inline;
+  }
+}
+
+@media (min-width: 640px) {
+  .mobileNav {
+    display: none;
+  }
+}
+
+.bar {
+  transition: 0.4s;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+}
+.anim-first-bar {
+  // -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(45deg) translateY(12px);
+  // transform: rotate(45deg) rotateY(180deg);
+}
+
+/* Fade out the second bar */
+.anim-second-bar {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.anim-third-bar {
+  transform: rotate(-45deg) translateY(-11px);
+}
+
+.hide {
+  opacity: 0;
+  height: 0px;
+  display: none;
+}

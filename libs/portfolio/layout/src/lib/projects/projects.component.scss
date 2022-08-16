@@ -1,0 +1,72 @@
+.project-overline {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 600;
+  // font-size: 16px;
+}
+
+.project-title {
+  font-family: "Roboto", sans-serif;
+  // font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.project-description {
+  // background-color: #10222a;
+  font-family: "Roboto", sans-serif;
+
+  padding: 8px 50px 8px 20px;
+  margin: 0;
+  border-radius: 8px;
+
+  p {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    color: var(--white-color);
+  }
+}
+
+.project-description-left {
+  // background-color: #10222a;
+  font-family: "Roboto", sans-serif;
+
+  padding: 8px 50px 8px 20px;
+  margin: 0;
+  border-radius: 8px;
+
+  p {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    color: var(--white-color);
+  }
+}
+
+.description_right {
+  padding: 8px 20px 8px 50px;
+}
+
+.description_left {
+  padding: 8px 50px 8px 20px;
+}
+
+.technology {
+  font-family: "Source Code Pro", monospace;
+}
+
+.project-image img {
+  -moz-box-shadow: 0 0 10px var(--main-btn-color);
+  -webkit-box-shadow: 0 0 10px var(--main-btn-color);
+  box-shadow: 0 0 10px var(--main-btn-color);
+  border-radius: 8px;
+}
+
+.content {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.content-left {
+  top: 50%;
+  transform: translateY(50%);
+}

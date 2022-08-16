@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "data": {
+      "type": "library",
+      "root": "libs/api/data",
+      "entryFile": "index",
+      "sourceRoot": "libs/api/data/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/api/data/tsconfig.lib.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true
+  }
+}

@@ -1,0 +1,26 @@
+<section id="projects" class="bg-blue">
+  <div
+    class="container w-full max-w-2xl px-5 py-24 mx-auto text-white sm:max-w-lg md:max-w-3xl lg:max-w-4xl xl:max-w-6xl lg:px-0">
+
+    <!-- <div class="container h-full px-5 py-24 mx-auto text-white md:px-0 xl:max-w-6xl"> -->
+    <div class="grid grid-cols-1 justify-items-center">
+      <h1 id="heading" class="mb-6 text-4xl font-bold text-center md:text-5xl lg:text-6xl">
+        <p class="leading-tight">Portfolio</p>
+        <p class="leading-tight">Showcase</p>
+      </h1>
+      <p class="max-w-lg text-sm leading-6 text-center md:w-4/5 text-md md:text-lg">
+        Some things I have worked on.
+      </p>
+      <div class="my-8 border-b-2 w-14 border-my-red"></div>
+
+      <div class="flex flex-col h-full space-y-10 md:space-y-20 mt-9">
+        <div *ngFor="let item of projects; let odd = odd; let even = even;">
+          <personal-project-right [project]="item" *ngIf="odd">
+          </personal-project-right>
+          <personal-project-left [project]="item" *ngIf="even">
+          </personal-project-left>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

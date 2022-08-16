@@ -15,7 +15,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@personal/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@personal/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@personal/libs/portfolio/layout": ["libs/libs/portfolio/layout/src/index.ts"],
+      "@personal/portfolio/core": ["libs/portfolio/core/src/index.ts"],
+      "@personal/portfolio/data": ["libs/portfolio/data/src/index.ts"],
+      "@personal/portfolio/layout": ["libs/portfolio/layout/src/index.ts"],
+      "@personal/portfolio/media": ["libs/portfolio/media/src/index.ts"],
+      "@personal/portfolio/module": ["libs/portfolio/module/src/index.ts"],
+      "@personal/portfolio/shared": ["libs/portfolio/shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

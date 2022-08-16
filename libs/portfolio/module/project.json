@@ -1,0 +1,27 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/portfolio/module/src",
+  "prefix": "personal",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/portfolio/module"
+      ],
+      "options": {
+        "jestConfig": "libs/portfolio/module/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/portfolio/module/**/*.ts",
+          "libs/portfolio/module/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

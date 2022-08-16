@@ -1,0 +1,47 @@
+.container {
+  text-align: center;
+
+  ul {
+    justify-content: center;
+  }
+
+  .button-row {
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  p {
+    padding: 0 10%;
+  }
+}
+@media (min-width: 420px) {
+  .container {
+    .button-row {
+      flex-direction: row;
+    }
+
+    p {
+      padding: 0 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    text-align: left;
+
+    ul,
+    .button-row {
+      justify-content: start;
+    }
+
+    .button-row {
+      flex-direction: row;
+    }
+
+    p {
+      padding: 0 0;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 15% 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+
+  padding: 10px 0 10px 10px;
+
+  .company-name {
+    font-family: "Source Code Pro", monospace;
+  }
+
+  .spacer {
+    display: none;
+  }
+
+  .job-title {
+    .area,
+    .periode {
+      font-family: "Source Code Pro", monospace;
+    }
+  }
+
+  ul {
+    list-style-type: "▹";
+    padding-inline-start: 1ch;
+
+    li {
+      padding-left: 10px;
+      &::marker {
+        font-size: 1rem;
+        margin-right: 10rem;
+        color: rgb(255 74 87);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 20% 10% 1fr;
+
+    padding: 10px 0 10px 10px;
+    border-left: 1px solid rgb(255 74 87);
+
+    .spacer {
+      display: block;
+    }
+  }
+}
