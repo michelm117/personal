@@ -4,9 +4,15 @@ import { AppController } from './app.controller';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import * as Joi from '@hapi/joi';
 import { MailerModule } from '@nestjs-modules/mailer';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
   imports: [
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'nx-app'),
+      exclude: ['/api*'],
+    }),
     ConfigModule.forRoot({
       isGlobal: true,
       validationSchema: Joi.object({
