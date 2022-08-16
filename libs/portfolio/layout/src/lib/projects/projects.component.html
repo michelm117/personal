@@ -14,7 +14,7 @@
       <div class="my-8 border-b-2 w-14 border-my-red"></div>
 
       <div class="flex flex-col h-full space-y-10 md:space-y-20 mt-9">
-        <div class="bg-transparent" *ngFor="let item of projects; let odd = odd; let even = even;">
+        <div *ngFor="let item of projects; let odd = odd; let even = even;">
           <personal-project-right [project]="item" *ngIf="odd">
           </personal-project-right>
           <personal-project-left [project]="item" *ngIf="even">
