@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import { ProjectsService } from '@personal/portfolio/data';
 import { Project } from '@personal/portfolio/shared';
 
 @Component({
@@ -15,25 +14,23 @@ export class ProjectsComponent implements OnInit {
 
   projects!: Project[];
 
-  constructor(private projectService: ProjectsService) {}
-
   ngOnInit(): void {
     this.projects = [
       {
         rank: -1,
         title: 'Team France Bleu',
         description:
-          'Team France Bleu is a fictional cycling team. The webpage contains a content management system with which one riders and stories can be added. For the backend I used using Nestjs',
-        githubLink: 'https://github.com',
+          'Team France Bleu is a amateur cycling team located in Freiburg, Germany. The page content is dynamic and can be edited by a CMS. Riders, stories races and more is can be managed by authorized users.',
+        githubLink: 'https://github.com/michelm117/tfb',
         link: 'https://tfb.michel.lu/',
         imgName: 'assets/img/team_france_bleu.png',
-        technologies: ['Angular', 'Nestjs', 'Tailwind'],
+        technologies: ['Angular', 'Nestjs', 'Tailwind', 'Angular Material'],
       },
       {
         rank: 0,
         title: 'Minttube',
         description:
-          'Mintube is an open-collaborative online learning community for people who want to learn from educational videos and blog posts.',
+          'Minttube is an open-collaborative online learning community for people who want to learn from educational videos and blog posts.',
         githubLink: '',
         link: 'https://minttube.net/',
         imgName: 'assets/img/minttube.png',
@@ -44,7 +41,7 @@ export class ProjectsComponent implements OnInit {
         title: 'Typewriter',
         description:
           'Typwriter was designed by Johannes Hucht and implemented by me. The webpage was created to showcase and compare self designed fonts.',
-        githubLink: 'https://github.com/michelm117/typewriter/',
+        githubLink: '',
         link: 'https://typewriter.daily-practice.net/',
         imgName: 'assets/img/typewriter_screen.png',
         technologies: ['Javascript', 'jQuery'],
@@ -54,7 +51,7 @@ export class ProjectsComponent implements OnInit {
         title: 'Portfolio v1.0',
         description:
           'This was my first attempt at creating a static homepage/portfolio. I used mainly pure HTML and CSS. For the contact form I used PHP.',
-        githubLink: 'https://git.michel.lu/projects/17/files',
+        githubLink: 'https://github.com/michelm117/personal_old',
         link: 'https://old.michel.lu',
         imgName: 'assets/img/portfolio_1.png',
         technologies: ['Javascript', 'Bootstrap', 'PHP'],
