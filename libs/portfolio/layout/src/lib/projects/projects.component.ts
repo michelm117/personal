@@ -20,7 +20,7 @@ export class ProjectsComponent implements OnInit {
         rank: -1,
         title: 'Team France Bleu',
         description:
-          'Team France Bleu is a amateur cycling team located in Freiburg, Germany. The page content is dynamic and can be edited by a CMS. Riders, stories races and more is can be managed by authorized users.',
+          'Team France Bleu is a amateur cycling team located in Freiburg, Germany. The page content is dynamic and can be edited. Riders, stories races and more is can be managed by authorized users.',
         githubLink: 'https://github.com/michelm117/tfb',
         link: 'https://tfb.michel.lu/',
         imgName: 'assets/img/team_france_bleu.png',
