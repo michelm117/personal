@@ -13,7 +13,7 @@ export class AppController {
   @Post('sendEmail')
   async sendEmail(@Body() messageDto: MessageDto, @RealIP() ip: string) {
     await this.mailService.sendMail({
-      to: 'marc@michel.lu',
+      to: this.configService.get('MAIL_FROM'),
       from: this.configService.get('MAIL_FROM'),
       subject: 'Contact - Portfolio',
       text: `${messageDto.subject}\n\n${messageDto.message}\n\n${messageDto.name} - ${messageDto.email} - ${ip}`,
